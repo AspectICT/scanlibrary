@@ -3,12 +3,9 @@ plugins {
     id 'maven-publish'
 }
 
-
 android {
     namespace "scanlibrary"
-    compileSdkVersion 30
-    buildToolsVersion "29.0.3"
-    
+
     // Needed for jitpack builds
     packagingOptions {
         doNotStrip '*/mips/*.so'
@@ -17,7 +14,7 @@ android {
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         ndk
