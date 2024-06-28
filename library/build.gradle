@@ -1,7 +1,5 @@
-plugins {
-    id 'com.android.library'
-    id 'maven-publish'
-}
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
 android {
     namespace "com.scanlibrary"
@@ -18,25 +16,31 @@ android {
         targetSdkVersion 33
         versionCode 1
         versionName "1.0"
-        ndk
-                {
-                    moduleName "Scanner"
-                }
+        ndk {
+            moduleName "Scanner"
+        }
     }
-    sourceSets.main
-            {
-                jni.srcDirs = []
-                jniLibs.srcDirs 'src/main/libs'
-            }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets.main
+            {
+                jni.srcDirs = []
+                jniLibs.srcDirs 'src/main/libs'
+            }
     compileOptions {
         sourceCompatibility = 17
         targetCompatibility = 17
+    }
+
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+            withJavadocJar()
+        }
     }
 }
 
@@ -52,12 +56,10 @@ afterEvaluate {
         publications {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
-                from components.findByName('release')
+                from components.release
                 groupId = 'com.scanlibrary'
                 artifactId = 'scanlibrary'
                 version = '1.0'
-
-                artifact("$buildDir/outputs/aar/${project.name}-release.aar")
             }
         }
     }
