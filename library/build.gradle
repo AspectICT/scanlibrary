@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace "scanlibrary"
-
+    compileSdk 34
     // Needed for jitpack builds
     packagingOptions {
         doNotStrip '*/mips/*.so'
