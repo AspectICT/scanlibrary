@@ -9,7 +9,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 
-import scanlibrary.R;
 
 /**
  * Created by jhansi on 28/03/15.

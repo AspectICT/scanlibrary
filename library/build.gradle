@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace "scanlibrary"
+    namespace "com.scanlibrary"
     compileSdk 34
 
     // Needed for jitpack builds

@@ -17,8 +17,6 @@ import android.widget.Toast;
 
 import java.io.IOException;
 
-import scanlibrary.R;
-
 /**
  * Created by jhansi on 29/03/15.
  */

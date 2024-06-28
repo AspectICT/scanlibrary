@@ -16,8 +16,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import scanlibrary.R;
-
 /**
  * Created by jhansi on 28/03/15.
  */
