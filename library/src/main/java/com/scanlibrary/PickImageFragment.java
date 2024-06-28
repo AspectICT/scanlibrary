@@ -29,6 +29,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import scanlibrary.R;
+
 /**
  * Created by jhansi on 04/04/15.
  */
